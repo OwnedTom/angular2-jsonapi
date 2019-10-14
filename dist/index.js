@@ -9,6 +9,7 @@ tslib_1.__exportStar(require("./decorators/nested-attribute.decorator"), exports
 tslib_1.__exportStar(require("./decorators/json-attribute.decorator"), exports);
 tslib_1.__exportStar(require("./decorators/json-api-model-config.decorator"), exports);
 tslib_1.__exportStar(require("./decorators/json-api-datastore-config.decorator"), exports);
+tslib_1.__exportStar(require("./decorators/relationship.decorator"), exports);
 tslib_1.__exportStar(require("./models/json-api-meta.model"), exports);
 tslib_1.__exportStar(require("./models/json-api.model"), exports);
 tslib_1.__exportStar(require("./models/json-nested.model"), exports);

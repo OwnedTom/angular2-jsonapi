@@ -6,6 +6,7 @@ export * from './decorators/nested-attribute.decorator';
 export * from './decorators/json-attribute.decorator';
 export * from './decorators/json-api-model-config.decorator';
 export * from './decorators/json-api-datastore-config.decorator';
+export * from './decorators/relationship.decorator';
 export * from './models/json-api-meta.model';
 export * from './models/json-api.model';
 export * from './models/json-nested.model';

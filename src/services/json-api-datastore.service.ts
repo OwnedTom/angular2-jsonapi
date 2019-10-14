@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse, HttpErrorResponse } from '@angular/common/http';
-import find from 'lodash-es/find';
+import { find } from 'lodash';
 import { map, catchError } from 'rxjs/operators';
 import { throwError, of, Observable } from 'rxjs';
 import { JsonApiModel } from '../models/json-api.model';
@@ -26,10 +26,10 @@ const AttributeMetadataIndex: string = AttributeMetadata as any;
 export class JsonApiDatastore {
   private globalHeaders: HttpHeaders;
   private globalRequestOptions: object = {};
-  private internalStore: {[type: string]: {[id: string]: JsonApiModel}} = {};
+  private internalStore: { [type: string]: { [id: string]: JsonApiModel } } = {};
   private toQueryString: Function = this.datastoreConfig.overrides
     && this.datastoreConfig.overrides.toQueryString ?
-      this.datastoreConfig.overrides.toQueryString : this._toQueryString;
+    this.datastoreConfig.overrides.toQueryString : this._toQueryString;
 
   private get getDirtyAttributes() {
     if (this.datastoreConfig.overrides
@@ -41,7 +41,7 @@ export class JsonApiDatastore {
 
   protected config: DatastoreConfig;
 
-  constructor(protected http: HttpClient) {}
+  constructor(protected http: HttpClient) { }
 
   /** @deprecated - use findAll method to take all models **/
   query<T extends JsonApiModel>(
@@ -96,7 +96,7 @@ export class JsonApiDatastore {
     return new modelType(this, { attributes: data });
   }
 
-  private static getDirtyAttributes(attributesMetadata: any): { string: any} {
+  private static getDirtyAttributes(attributesMetadata: any): { string: any } {
     const dirtyData: any = {};
 
     for (const propertyName in attributesMetadata) {

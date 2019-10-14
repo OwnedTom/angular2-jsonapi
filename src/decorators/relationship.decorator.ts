@@ -7,6 +7,6 @@ export function Relationship(options: { resource: string } = { resource: '' }): 
       relationship: options.resource || propertyName
     });
 
-    Reflect.defineMetadata('HasMany', annotations, target);
+    Reflect.defineMetadata('Relationship', annotations, target);
   };
 }

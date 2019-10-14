@@ -8,7 +8,7 @@ function Relationship(options) {
             propertyName: propertyName,
             relationship: options.resource || propertyName
         });
-        Reflect.defineMetadata('HasMany', annotations, target);
+        Reflect.defineMetadata('Relationship', annotations, target);
     };
 }
 exports.Relationship = Relationship;
